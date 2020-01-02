@@ -33,3 +33,9 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: '35a4152d-c57e-4391-ab83-dd1d8ff5af33'
+    appName: 'PopDiner1234'
+    package: $(System.ArtifactsDirectory)/**/*.zip   
